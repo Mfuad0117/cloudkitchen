@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Caterer Payment Page</title>
+<style>
+  body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    margin: 0;
+    padding: 0;
+  }
+  .container {
+    max-width: 600px;
+    margin: 50px auto;
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  }
+  h1 {
+    text-align: center;
+    color: #333;
+  }
+  label {
+    display: block;
+    margin-bottom: 5px;
+    color: #666;
+  }
+  input[type="text"], input[type="number"] {
+    width: 100%;
+    padding: 8px;
+    margin-bottom: 20px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-sizing: border-box;
+  }
+  button {
+    background-color: #4CAF50;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  button:hover {
+    background-color: #45a049;
+  }
+  .qr-code {
+    margin-top: 20px;
+    text-align: center;
+  }
+  #qrcode {
+    width: 200px;
+    height: 200px;
+    margin: 0 auto;
+  }
+</style>
+</head>
+<body style="background-color: powderblue">
+
+<div class="container">
+  <h1>Payment</h1>
+  <form id="payment-form">
+    <label for="name">Account No:</label>
+    <input type="text" id="name" name="name" required>
+
+    <label for="card-number">IFSC code:</label>
+    <input type="text" id="card-number" name="card-number" required>
+
+    <label for="card-number">UPI ID:</label>
+    <input type="text" id="card-number" name="card-number" required>
+
+   
+
+
+
+
+   
+  </form>
+
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/qrcode"></script>
+<script>
+  const paymentForm = document.getElementById('payment-form');
+
+  paymentForm.addEventListener('submit', function(event) {
+    event.preventDefault();
+
+    // Simulate payment processing
+    setTimeout(function() {
+      generateQRCode();
+    }, 2000); // Delay for 2 seconds (simulating payment processing)
+
+  });
+
+  function generateQRCode() {
+    const qrCodeDiv = document.getElementById('qrcode');
+    qrCodeDiv.innerHTML = ''; // Clear any existing QR code
+
+    // Generate QR code with payment details
+    const qr = new QRCode(qrCodeDiv, {
+      text: 'Your Payment Details', // Include payment details here
+      width: 200,
+      height: 200
+    });
+  }
+  function showPaymentMessage(isSuccessful) {
+    if (isSuccessful) {
+      paymentMessage.textContent = 'Payment Successful!';
+      paymentMessage.style.color = 'green';
+    } else {
+      paymentMessage.textContent = 'Payment Declined. Please try again.';
+      paymentMessage.style.color = 'red';
+    }
+    paymentMessage.style.display = 'block'; // Show the message
+  }
+
+  function generateQRCode() {
+    const qrCodeDiv = document.getElementById('qrcode');
+    qrCodeDiv.innerHTML = ''; // Clear any existing QR code
+
+    // Generate QR code with payment details
+    const qr = new QRCode(qrCodeDiv, {
+      text: 'Your Payment Details', // Include payment details here
+      width: 200,
+      height: 200
+    });
+  }
+</script>
+
+</body>
+</html>

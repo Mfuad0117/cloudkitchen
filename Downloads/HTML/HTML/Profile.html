@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Caterer Profile</title>
+<style>
+  body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: black;
+  }
+  .container {
+    max-width: 800px;
+    margin: 20px auto;
+    padding: 20px;
+    background-color:white;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  }
+  h1 {
+    text-align: center;
+    color: mediumblue;
+  }
+  .profile-info {
+    margin-top: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .profile-info img {
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin-right: 20px;
+  }
+  .profile-info .details {
+    flex-grow: 1;
+  }
+  .profile-info h2 {
+    margin-top: 0;
+    color: black;
+  }
+  .profile-info p {
+    color: black;
+  }
+</style>
+</head>
+<body style="background-color: powderblue">
+
+<div class="container">
+  <h1>Caterer Profile</h1>
+  <div class="profile-info">
+    <div class="details">
+      <h2><p>Caterer name:</p></h2>
+      <p><strong>Location:</strong></p>
+      <p><strong>Contact:</strong></p>
+    </div>
+  </div>
+  <div class="review">
+    <h2><p>Reviews:</p></h2>
+    <p class="name">John Doe</p>
+    <p class="rating">&#9733;&#9733;&#9733;&#9733;&#9733;</p>
+    <p>Great service</p>
+  </div>
+  <div id="gallery">
+    <!-- Gallery Images will be dynamically added here -->
+  </div>
+</div>
+
+<script>
+  // Example JavaScript code to dynamically add images to the gallery
+
+
+  
+
+  images.forEach(imageUrl => {
+    const img = document.createElement('img');
+    img.src = imageUrl;
+    img.alt = 'Catering Example';
+    img.style.width = '100%';
+    img.style.marginBottom = '10px';
+    gallery.appendChild(img);
+  });
+</script>
+
+</body>
+</html>

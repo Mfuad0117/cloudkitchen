@@ -1,0 +1,104 @@
+<!DOCTYPE html> 
+<html lang="en"> 
+<head> 
+    <meta charset="UTF-8"> 
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"> 
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+    <title>Cloud Kitchen</title> 
+    <link rel="stylesheet" href="style.css"> 
+    <link rel="stylesheet" href="responsive.css"> 
+</head> 
+<body style="background-color: powderblue"> 
+	
+</style>
+    
+    <!-- for header part -->
+    <header> 
+        <div class="logosec"> 
+            <img class="logo"src="logo.png" alt="">
+            <!-- <div class="logo"><font color="lightpurple">Cloudkitchen</font></div>  -->
+            <div class="navcontainer"> 
+                        <div class="option2 nav-option"> 
+                            <a href="Orderlist.html" style="display: flex; align-items: center;">
+                                <img src="https://media.geeksforgeeks.org/wp-content/uploads/20221210183322/9.png" class="nav-img" alt="articles" style="width: 30px; height: 30px; margin-right: 5px;"> 
+                                <h3 style="margin: 0;">Orders</h3> 
+                            </a>
+                        </div> 
+                        
+                        <div class="nav-option option5"> 
+                            <a href="Profile.html" style="display: flex; align-items: center;">
+                            <img src="https://media.geeksforgeeks.org/wp-content/uploads/20221210183323/10.png" class="nav-img" alt="blog"> 
+                            <h3 style="margin: 0;"> Profile</h3> 
+                        </a>
+                        </div> 
+                        <div class="nav-option option6"> 
+                            <a href="Payment.html" style="display: flex; align-items: center;">
+                            <img src="https://media.geeksforgeeks.org/wp-content/uploads/20221210183320/4.png" class="nav-img" alt="settings"> 
+                            <h3 style="margin: 0;"> Payment</h3> 
+                        </a>
+                        </div> 
+                        <div class="nav-option option7"> 
+                            <a href="Shipping.html" style="display: flex; align-items: center;">
+                            <img src="pngtree-fast-delivery-icon-delivery-icon-png-image_2047531.jpg" class="nav-img" alt="settings"> 
+                            <h3 style="margin: 0;"> Shipping Status</h3> 
+                        </a>
+                        </div>
+                        <div class="nav-option logout"> 
+                            <a href="logout.html" style="display: flex; align-items: center;">
+                            <img src="https://media.geeksforgeeks.org/wp-content/uploads/20221210183321/7.png" class="nav-img" alt="logout"> 
+                            <h3 style="margin: 0;">Logout</h3> 
+                        </div> 
+                    </div> 
+                </nav> 
+            </div> 
+
+            
+        </div> 
+        
+        </div> 
+        
+    </header> 
+ 
+        <div class="main"> 
+            <div class="box-container"> 
+                <div class="box box2"> 
+                    <div class="text"> 
+                        <h2 class="topic-heading" id="likeCount">0</h2> 
+                        <h2 class="topic">Likes</h2> 
+                    </div> 
+                    <a href="#" onclick="increaseLikes()"> <!-- Anchor tag wraps the image -->
+                        <img src="https://media.geeksforgeeks.org/wp-content/uploads/20221210185030/14.png" alt="likes"> 
+                    </a>
+                </div> 
+                <div class="box box4"> 
+                    <div class="text"> 
+                        <h2 class="topic-heading" id="orderCount">0</h2>
+                        <h2 class="topic">Successful Orders</h2> 
+                    </div> 
+					<a href="#" onclick="increaseOrders()"> <!-- Anchor tag wraps the image -->
+                    <img src="https://media.geeksforgeeks.org/wp-content/uploads/20221210185029/13.png" alt="published"> 
+					</a>
+                </div> 
+            </div> 
+        </div> 
+    </div> 
+
+    <script>
+        let likes = 0; // Initial likes count
+        const likeCount = document.getElementById("likeCount");
+
+        function increaseLikes() {
+            likes++;
+            likeCount.textContent = likes;
+        }
+
+        let orders = 0; // Initial orders count
+        const orderCount = document.getElementById("orderCount");
+
+        function increaseOrders() {
+            orders++;
+            orderCount.textContent = orders;
+        }
+    </script> 
+</body> 
+</html>
